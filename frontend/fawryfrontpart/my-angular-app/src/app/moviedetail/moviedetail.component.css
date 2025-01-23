@@ -1,0 +1,78 @@
+/* Table styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-bordered {
+    border: 1px solid #ccc;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .table-dark {
+    background-color: #343a40;
+    color: white;
+  }
+  
+  /* Styling for poster images */
+  .movie-poster {
+    max-width: 100px;
+    height: auto;
+  }
+  
+  /* Styling for the button */
+  .details-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .details-btn:hover {
+    background-color: #0056b3;
+  }
+
+
+  /* Custom styling for the Bootstrap danger button */
+.btn-danger {
+  background-color: #dc3545; /* Default Bootstrap danger red */
+  color: white;              /* White text color */
+  border: 1px solid #dc3545; /* Border matches button color */
+  padding: 10px 20px;        /* Custom padding */
+  font-size: 16px;           /* Font size */
+  border-radius: 5px;        /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Custom hover effect */
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red on hover */
+  border-color: #bd2130;     /* Darker border color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+}
+
+/* Custom active button state */
+.btn-danger:active {
+  background-color: #bd2130; /* Even darker red for active state */
+  border-color: #721c24;     /* Active state border color */
+}
+
+/* Adding margin end (me-2) custom margin */
+.me-2 {
+  margin-right: 10px; /* Custom margin (me-2 in Bootstrap is typically 0.5rem, adjust as needed) */
+}
+
+/* Focus state */
+.btn-danger:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); /* Red border shadow on focus */
+}
+
+  

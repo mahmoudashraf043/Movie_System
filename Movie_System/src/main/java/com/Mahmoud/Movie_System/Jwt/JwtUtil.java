@@ -58,6 +58,7 @@ public class JwtUtil {
         TokenDto token = new TokenDto();
         token.setAccessToken(accessToken);
         token.setRefreshToken(refreshToken);
+        token.setRole(extractRole(accessToken));
 
         return token;
     }

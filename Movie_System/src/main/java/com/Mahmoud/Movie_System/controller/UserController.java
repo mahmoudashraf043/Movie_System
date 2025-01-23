@@ -27,6 +27,8 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @EnableMethodSecurity
+@RequestMapping
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
 
     private final UserService userService;
@@ -42,33 +44,5 @@ public class UserController {
         return new ResponseEntity<>(userService.createAdmin(registerDto), HttpStatus.CREATED);
     }
 
-    @GetMapping("/movie/add/{imdbId}")
-    @PreAuthorize("hasAuthority('admin')")
-    public ResponseEntity<Movie> addMovie(@PathVariable String  imdbId) throws JsonProcessingException {
-        return new ResponseEntity<>(movieService.addMovie(imdbId) , HttpStatus.OK);
-    }
 
-    @GetMapping("/movie/delete/{imdbId}")
-    @PreAuthorize("hasAuthority('admin')")
-    public String deleteMovie(@PathVariable String  imdbId) throws JsonProcessingException {
-        return movieService.deleteMovie(imdbId);
-    }
-
-    @GetMapping("/movies")
-    public Page<Movie> getMovies(@RequestParam(defaultValue = "0") int pageNumber) throws JsonProcessingException {
-
-        return (movieService.getMovies(pageNumber));
-    }
-    @GetMapping("/movies/get/{imdb}")
-    public ResponseEntity<Movie> findMovie(@PathVariable String  imdbId) throws JsonProcessingException {
-        return new ResponseEntity<>(movieService.findMovie(imdbId),HttpStatus.OK);
-    }
-    @GetMapping("movies/find")
-    public Page<Movie> searchMovie(@RequestParam("Title") String title, @RequestParam(defaultValue = "0") int pageNumber) throws JsonProcessingException {
-        return (movieService.searchMovie(title , pageNumber));
-    }
-    @GetMapping("movies/rate/{imdbid}")
-    public ResponseEntity<String> rateMovie(@RequestParam int rate ,@PathVariable String imdbid) throws JsonProcessingException {
-        return new ResponseEntity<>(rateService.rateMovie(rate , imdbid) , HttpStatus.OK);
-    }
 }

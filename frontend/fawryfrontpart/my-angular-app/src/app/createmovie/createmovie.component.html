@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-9">
+      <div class="register">
+        <form [formGroup]="movieForm" class="w-50 m-5 p-5 my-5 rounded-4 border border-info rounded" (ngSubmit)="addMovie()">
+    <h2 class="text-center m-3" > Create New Movie</h2>
+          <div class="mb-3">
+            <br>
+            <label for="image" class="form-label">movie imdbid</label>
+            <br>
+            <input type="text" class="form-control" id="image" formControlName="imdbId">
+            <div *ngIf="movieForm.get('imdbId')?.invalid && movieForm.get('imdbId')?.touched" class="text-danger">
+              movie title is required.
+            </div>
+          </div>
+          <br>
+
+          <button type="submit" class="btn btn-primary" [disabled]="movieForm.invalid">Add Movie</button>
+        </form>
+      </div>
+    </div>
+  </div>
+

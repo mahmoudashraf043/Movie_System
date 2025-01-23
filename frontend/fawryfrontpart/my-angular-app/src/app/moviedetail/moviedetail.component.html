@@ -1,0 +1,31 @@
+<table class="table table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>title</th>
+        <th>genre</th>
+        <th>description</th>
+        <th>year</th>
+        <th>poster</th>
+        <th>director</th>
+        <th>redirect</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngIf="movie">
+        <th>{{movie.Title}}</th>
+        <th>{{movie.Genre}}</th>
+        <th>{{movie.Description}}</th>
+        <th>{{movie.Year}}</th>
+        <th>
+          <img [src]="movie.Poster" alt="{{ movie.Poster }}" width="100" height="150">
+        </th>
+        <th>{{movie.Director}}</th>
+        <th>
+          <button class="btn btn-danger me-2" (click)="redirect()">Home</button>
+        </th>
+      </tr>
+
+    </tbody>
+
+  </table>

@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 @RequiredArgsConstructor
-public class GetMovieService {
+public class IntegrationService {
 
 
     private final RestTemplate restTemplate;

@@ -1,6 +1,7 @@
 package com.Mahmoud.Movie_System.configuration;
 
 import com.Mahmoud.Movie_System.Jwt.JwtAuthenticationFilter;
+import com.Mahmoud.Movie_System.entity.User;
 import com.Mahmoud.Movie_System.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Configurable;
@@ -25,9 +26,10 @@ public class SystemConfig{
     private final JwtAuthenticationFilter jwtAuthenticationFilter;
     private final UserRepository userRepository;
 
-    /*@Bean
+
+  /*  @Bean
     public UserDetailsService userDetailsService() {
-        return userIdentifier -> userRepository.findByUsername(username)
+        return userIdentifier -> userRepository.findByUsername()
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
     }*/
     @Bean

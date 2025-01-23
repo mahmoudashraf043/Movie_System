@@ -1,0 +1,206 @@
+/* Movie Dashboard Container */
+.movie-dashboard {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 30px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Dashboard Title */
+.dashboard-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #536e8a;
+  margin-bottom: 20px;
+}
+
+/* Table Styles */
+.movie-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.movie-table th,
+.movie-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.movie-table th {
+  background-color: #536e8a;
+  color: #fff;
+}
+
+.movie-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.movie-table tr:hover {
+  background-color: #e9ecef;
+  cursor: pointer;
+}
+
+/* Movie Poster Image */
+.movie-poster {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Button Styles */
+.delete-btn {
+  font-size: 1rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .movie-dashboard {
+    padding: 15px;
+  }
+
+  .movie-table th,
+  .movie-table td {
+    padding: 8px;
+  }
+
+  .movie-poster {
+    width: 40px;
+    height: 40px;
+  }
+
+  .delete-btn {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center; /* Center the pagination */
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0; /* Adds margin for spacing */
+}
+
+/* Styling for each page item (li) */
+.page-item {
+  margin: 0 5px; /* Spacing between the pagination items */
+}
+
+/* Styling for page links (anchors inside page-item) */
+.page-link {
+  display: inline-block;
+  padding: 8px 16px; /* Adequate padding for clickable area */
+  font-size: 1rem;
+  font-weight: 500; /* Adjust font weight */
+  color: #007bff; /* Bootstrap's default link color */
+  background-color: white; /* Background color for page links */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 4px; /* Rounded corners for the page links */
+  cursor: pointer; /* Pointer cursor for clickable items */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for page links */
+.page-link:hover {
+  background-color: #007bff; /* Change background on hover */
+  color: white; /* Change text color to white on hover */
+  border-color: #007bff; /* Change border color on hover */
+}
+
+/* Styling for disabled page links */
+.page-item.disabled .page-link {
+  color:#007bff; /* Light gray text for disabled state */
+  background-color: #f5f5f5; /* Light background for disabled state */
+  border-color: #ddd; /* Border color for disabled state */
+  cursor: not-allowed; /* Change cursor to not-allowed for disabled links */
+}
+
+/* Styling for the active page link */
+.page-item.active .page-link {
+  background-color: #007bff; /* Active page background */
+  color: white; /* White text for active page */
+  border-color: #007bff; /* Same border as background for active page */
+}
+
+/* Styling for pagination information (e.g., "Page 1 of X") */
+.page-item.disabled span {
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: #333; /* Normal text color for info */
+  background-color: #fff; /* White background */
+  border: 1px solid #ddd; /* Border around pagination info */
+  border-radius: 4px; /* Rounded corners for the info section */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .pagination {
+    font-size: 0.9rem;
+    color: #bd2130; /* Reduce font size on smaller screens */
+  }
+
+  .page-link {
+    padding: 6px 12px; /* Slightly reduced padding on small screens */
+  }
+}
+
+/* Override btn class */
+.btn {
+  padding: 10px 20px; /* Increase padding for better button appearance */
+  font-weight: bold;  /* Make the text bold */
+  border-radius: 5px; /* Round the corners */
+  text-transform: uppercase; /* Uppercase text for a more defined look */
+  transition: background-color 0.3s, transform 0.2s; /* Smooth transitions on hover */
+}
+
+/* Override btn-danger class */
+.btn-danger {
+  background-color: #dc3545; /* Custom red background (same as Bootstrap's default) */
+  border: 1px solid #dc3545; /* Border to match the background */
+  color: white; /* White text color */
+}
+
+/* Hover effect for btn-danger */
+.btn-danger:hover {
+  background-color: #c82333; /* Darker red when hovering */
+  transform: translateY(-2px); /* Slight lift effect when hovered */
+}
+
+/* Focus effect for btn-danger */
+.btn-danger:focus {
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5); /* Adding a subtle shadow when focused */
+}
+
+/* Override me-2 class (spacing utility) */
+.me-2 {
+  margin-right: 0.5rem; /* Add right margin of 8px (Bootstrap default is 0.5rem) */
+}
+
+/* You can also create custom styles for different states like active or disabled */
+.btn-danger:active {
+  background-color: #bd2130; /* Even darker red when the button is pressed */
+  transform: translateY(0); /* Remove the lift effect when active */
+}
+
+.btn-danger:disabled {
+  background-color: #f8d7da; /* Light red for disabled button */
+  border-color: #f5c6cb; /* Lighter border for disabled button */
+  color: #6c757d; /* Gray text */
+}
+

@@ -1,5 +1,7 @@
 package com.Mahmoud.Movie_System.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -47,7 +49,7 @@ public class Movie {
     @JsonProperty("Actors")  // Add the "Actors" field from JSON
     private String actors;
 
-    @Column(length = 50)
+    @Column(length = 100)
     @JsonProperty("Language")  // Add the "Language" field from JSON
     private String language;
 
@@ -65,9 +67,13 @@ public class Movie {
 
 
     @OneToMany(mappedBy = "movie" , cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+    @JsonIgnore
     private List<Rating> ratings;
 
+
+
     @Column
+    @JsonIgnore
     private boolean isDeleted = false;
 
 

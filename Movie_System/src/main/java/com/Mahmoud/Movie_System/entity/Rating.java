@@ -1,5 +1,6 @@
 package com.Mahmoud.Movie_System.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -14,6 +15,7 @@ public class Rating {
     private int id;
 
     @ManyToOne(fetch = FetchType.LAZY , cascade = CascadeType.ALL)
+    @JsonBackReference("UserRatingReference")
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY , cascade = CascadeType.ALL)

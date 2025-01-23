@@ -1,19 +1,20 @@
 package com.Mahmoud.Movie_System.entity;
 
 import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.List;
 
 
 @Entity
 @Data
-@JsonFilter("userFilter")
 @Table(name = "user")
-public class User {
+public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id", updatable = false, nullable = false)
@@ -38,6 +39,7 @@ public class User {
     private String role;
 
     @OneToMany(mappedBy = "user" , cascade = CascadeType.ALL , fetch = FetchType.LAZY)
+    @JsonManagedReference("UserRatingReference")
     private List<Rating> ratings;
 
 }
