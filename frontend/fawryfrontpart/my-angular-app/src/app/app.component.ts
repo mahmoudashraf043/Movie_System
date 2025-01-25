@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { MovieDashboardComponent } from './movie-dashboard/movie-dashboard.component';
 
-import { CreatemovieComponent } from './createmovie/createmovie.component';
+import { addmovieComponent } from './addmovie/addmovie.component';
 import { DeletemovieComponent } from './deletemovie/deletemovie.component';
 import { LoadmoviesComponent } from './loadmovies/loadmovies.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -15,7 +15,7 @@ import { GetmoviesfromexternalapiComponent } from './getmoviesfromexternalapi/ge
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,FormsModule,ReactiveFormsModule/*BrowserModule*/,LoginComponent,MovieDashboardComponent,CreatemovieComponent,DeletemovieComponent,LoadmoviesComponent,MoviedetailComponent,GetmoviesfromexternalapiComponent],
+  imports: [RouterOutlet,FormsModule,ReactiveFormsModule/*BrowserModule*/,LoginComponent,MovieDashboardComponent,addmovieComponent,DeletemovieComponent,LoadmoviesComponent,MoviedetailComponent,GetmoviesfromexternalapiComponent],
 
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

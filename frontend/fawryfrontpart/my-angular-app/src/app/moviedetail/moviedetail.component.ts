@@ -1,32 +1,34 @@
-import { Component,OnInit } from '@angular/core';
-import { Injectable,Inject } from '@angular/core';
-import { Router,ActivatedRoute } from '@angular/router'
-import { CommonModule } from '@angular/common';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {Component} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router'
+//import { response } from 'express';
+import {CommonModule, NgClass, NgFor, NgIf} from '@angular/common';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 //import { NgModule } from '@angular/core';
-
-import { HttpClientModule } from '@angular/common/http';
-//import { response } from 'express';
-import { NgIf,NgFor,NgClass } from '@angular/common';
-import { MovieServiceService } from '../movie-service.service';
+import {HttpClientModule} from '@angular/common/http';
+import {MovieServiceService} from '../movie-service.service';
 import {movie} from "../movie";
+
 @Component({
   selector: 'app-moviedetail',
   standalone: true,
-  imports: [CommonModule,FormsModule,ReactiveFormsModule,NgIf,NgFor,CommonModule,NgClass,HttpClientModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, NgIf, NgFor, CommonModule, NgClass, HttpClientModule],
   templateUrl: './moviedetail.component.html',
   styleUrl: './moviedetail.component.css'
 })
 export class MoviedetailComponent {
-   movie: movie | undefined;
-   movieId!:number
-   constructor(private movieservice: MovieServiceService,private router:ActivatedRoute,private route:Router){}
-   ngOnInit():void{
+  movie: movie | undefined;
+  movieId!: number
+
+  constructor(private movieservice: MovieServiceService, private router: ActivatedRoute, private route: Router) {
+  }
+
+  ngOnInit(): void {
     this.movieId = +this.router.snapshot.paramMap.get('id')!;
     this.fetchMovieDetails();
-   }
-   fetchMovieDetails():void{
+  }
+
+  fetchMovieDetails(): void {
     this.movieservice.getmovie(this.movieId).subscribe(
       (res: any) => {
 
@@ -37,10 +39,10 @@ export class MoviedetailComponent {
 
         console.error('Error fetching movies:', error);
       }
-
     );
   }
-  redirect():void{
+
+  redirect(): void {
 
     this.route.navigate(['/moviedashboard']);
   }

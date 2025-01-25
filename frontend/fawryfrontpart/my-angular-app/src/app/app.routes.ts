@@ -4,7 +4,7 @@ import {NgModule} from '@angular/core';
 import {LoginComponent} from './login/login.component';
 import {MovieDashboardComponent} from './movie-dashboard/movie-dashboard.component';
 
-import {CreatemovieComponent} from './createmovie/createmovie.component';
+import {addmovieComponent} from './addmovie/addmovie.component';
 import {DeletemovieComponent} from './deletemovie/deletemovie.component';
 import {LoadmoviesComponent} from './loadmovies/loadmovies.component';
 import {BrowserModule} from '@angular/platform-browser';
@@ -17,7 +17,7 @@ export const routes: Routes = [{path: '', redirectTo: '/login', pathMatch: 'full
   {path: 'login', component: LoginComponent}, {
     path: 'moviedashboard',
     component: MovieDashboardComponent
-  }, {path: 'createmoviedashboard', component: CreatemovieComponent}, {
+  }, {path: 'addmoviedashboard', component: addmovieComponent}, {
     path: 'deletemoviedashboard',
     component: DeletemovieComponent
   }, {path: 'loadmoviedashboard', component: LoadmoviesComponent}, {
