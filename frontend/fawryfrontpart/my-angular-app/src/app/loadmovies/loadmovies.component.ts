@@ -39,7 +39,6 @@ title:string = '';
         this.totalElements = res.totalResults;
         this.movies = res.Search;
         this.totalPages = Math.floor(this.totalElements/25);
-        console.log("hello");
       },
       (error) => {
 

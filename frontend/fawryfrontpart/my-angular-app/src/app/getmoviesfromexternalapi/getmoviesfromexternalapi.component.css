@@ -3,7 +3,7 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #f4f4f9;
+    background-color: #d0d5d9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -22,7 +22,7 @@
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #fac505;
     border-radius: 4px;
     box-sizing: border-box;
     margin-bottom: 15px;
@@ -37,7 +37,7 @@
 
 /* Button styling */
 .submit-button {
-    background-color: #536e8a;
+    background-color: #fac505;
     color: white;
     font-size: 1rem;
     padding: 12px 20px;
@@ -50,7 +50,7 @@
 
 /* Button hover effect */
 .submit-button:hover {
-    background-color: #84a1b8;
+    background-color: #0d70b8;
 }
 
 /* Responsive design */

@@ -63,7 +63,7 @@
 }
 
 .delete-btn:hover {
-  background-color: #dc3545;
+  background-color: #fac505 ;
   color: white;
 }
 
@@ -108,9 +108,9 @@
   padding: 8px 16px; /* Adequate padding for clickable area */
   font-size: 1rem;
   font-weight: 500; /* Adjust font weight */
-  color: #007bff; /* Bootstrap's default link color */
-  background-color: white; /* Background color for page links */
-  border: 1px solid #ddd; /* Light gray border */
+  color: white; /* Bootstrap's default link color */
+  background-color: #fac505; /* Background color for page links */
+  border: 1px solid #fac505; /* Light gray border */
   border-radius: 4px; /* Rounded corners for the page links */
   cursor: pointer; /* Pointer cursor for clickable items */
   transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for hover effect */
@@ -118,24 +118,24 @@
 
 /* Hover effect for page links */
 .page-link:hover {
-  background-color: #007bff; /* Change background on hover */
+  background-color: #0d70b8; /* Change background on hover */
   color: white; /* Change text color to white on hover */
-  border-color: #007bff; /* Change border color on hover */
+  border-color: #0d70b8; /* Change border color on hover */
 }
 
 /* Styling for disabled page links */
 .page-item.disabled .page-link {
-  color:#007bff; /* Light gray text for disabled state */
-  background-color: #f5f5f5; /* Light background for disabled state */
-  border-color: #ddd; /* Border color for disabled state */
+  color:white; /* Light gray text for disabled state */
+  background-color: #fac505; /* Light background for disabled state */
+  border-color: #fac505; /* Border color for disabled state */
   cursor: not-allowed; /* Change cursor to not-allowed for disabled links */
 }
 
 /* Styling for the active page link */
 .page-item.active .page-link {
-  background-color: #007bff; /* Active page background */
+  background-color: #fac505; /* Active page background */
   color: white; /* White text for active page */
-  border-color: #007bff; /* Same border as background for active page */
+  border-color: #fac505; /* Same border as background for active page */
 }
 
 /* Styling for pagination information (e.g., "Page 1 of X") */
@@ -143,8 +143,8 @@
   padding: 8px 16px;
   font-size: 1rem;
   color: #333; /* Normal text color for info */
-  background-color: #fff; /* White background */
-  border: 1px solid #ddd; /* Border around pagination info */
+  background-color: #fac505; /* White background */
+  border: 1px solid #fac505; /* Border around pagination info */
   border-radius: 4px; /* Rounded corners for the info section */
 }
 
@@ -171,14 +171,14 @@
 
 /* Override btn-danger class */
 .btn-danger {
-  background-color: #dc3545; /* Custom red background (same as Bootstrap's default) */
-  border: 1px solid #dc3545; /* Border to match the background */
+  background-color: #fac505 ; /* Custom red background (same as Bootstrap's default) */
+  border: 1px solid #fac505 ; /* Border to match the background */
   color: white; /* White text color */
 }
 
 /* Hover effect for btn-danger */
 .btn-danger:hover {
-  background-color: #c82333; /* Darker red when hovering */
+  background-color: #0d70b8; /* Darker red when hovering */
   transform: translateY(-2px); /* Slight lift effect when hovered */
 }
 
@@ -194,13 +194,13 @@
 
 /* You can also create custom styles for different states like active or disabled */
 .btn-danger:active {
-  background-color: #bd2130; /* Even darker red when the button is pressed */
+  background-color: #fac505; /* Even darker red when the button is pressed */
   transform: translateY(0); /* Remove the lift effect when active */
 }
 
 .btn-danger:disabled {
-  background-color: #f8d7da; /* Light red for disabled button */
-  border-color: #f5c6cb; /* Lighter border for disabled button */
+  background-color: #fac505; /* Light red for disabled button */
+  border-color: #fac505; /* Lighter border for disabled button */
   color: #6c757d; /* Gray text */
 }
 

@@ -1,6 +1,6 @@
 .movie-dashboard {
     padding: 20px;
-    background-color: #f8f9fa;
+    background-color: #d0d5d9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 30px auto;
@@ -62,7 +62,7 @@
   }
 
   .delete-btn:hover {
-    background-color: #dc3545;
+    background-color: #fac505;
     color: white;
   }
 
@@ -136,7 +136,7 @@
 /* Styling for the active page link */
 .page-item.active .page-link {
   background-color: #536e8a; /* Active page background */
-  color: red; /* White text for active page */
+  color: white; /* White text for active page */
   border-color: #536e8a; /* Same border as background for active page */
 }
 
@@ -164,9 +164,9 @@
 
 /* Custom styling for the Bootstrap danger button */
 .btn-danger {
-  background-color: #dc3545; /* Default Bootstrap danger red */
+  background-color: #fac505; /* Default Bootstrap danger red */
   color: white;              /* White text color */
-  border: 1px solid #dc3545; /* Border matches button color */
+  border: 1px solid #fac505; /* Border matches button color */
   padding: 10px 20px;        /* Custom padding */
   font-size: 16px;           /* Font size */
   border-radius: 5px;        /* Rounded corners */
@@ -175,15 +175,15 @@
 
 /* Custom hover effect */
 .btn-danger:hover {
-  background-color: #c82333; /* Darker red on hover */
-  border-color: #bd2130;     /* Darker border color */
+  background-color: #0d70b8; /* Darker red on hover */
+  border-color: #0d70b8;     /* Darker border color */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow effect */
 }
 
 /* Custom active button state */
 .btn-danger:active {
-  background-color: #bd2130; /* Even darker red for active state */
-  border-color: #721c24;     /* Active state border color */
+  background-color: #fac505; /* Even darker red for active state */
+  border-color: #fac505;     /* Active state border color */
 }
 
 /* Adding margin end (me-2) custom margin */

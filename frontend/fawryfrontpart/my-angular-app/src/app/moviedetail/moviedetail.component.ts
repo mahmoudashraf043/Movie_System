@@ -23,7 +23,7 @@ export class MoviedetailComponent {
    movieId!:number
    constructor(private movieservice: MovieServiceService,private router:ActivatedRoute,private route:Router){}
    ngOnInit():void{
-    this.movieId =+ this.router.snapshot.paramMap.get('id')!;
+    this.movieId = +this.router.snapshot.paramMap.get('id')!;
     this.fetchMovieDetails();
    }
    fetchMovieDetails():void{

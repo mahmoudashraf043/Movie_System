@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #d0d5d9;
   }
 
   /* Container for form section */
@@ -15,7 +15,7 @@ body {
 
   /* Form section styles */
   .register {
-    background-color: #ffffff;
+    background-color: #d0d5d9;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 30px;
@@ -27,14 +27,14 @@ body {
   /* Form header */
   h2 {
     font-size: 2rem;
-    color: #536e8a;
+    color: black;
     margin-bottom: 20px;
   }
 
   /* Input fields styles */
   .form-control {
     border-radius: 5px;
-    border: 1px solid #ced4da;
+    border: 1px solid #d0d5d9;
     padding: 10px;
     font-size: 1rem;
     width: 100%;
@@ -63,7 +63,7 @@ body {
 
   /* Button styles */
   .btn {
-    background-color: #536e8a;
+    background-color: #fac505;
     border: none;
     padding: 10px 20px;
     color: white;
@@ -75,12 +75,12 @@ body {
 
   /* Button hover effect */
   .btn:hover {
-    background-color: #0056b3;
+    background-color: #0d70b8;
   }
 
   /* Disable button effect */
   .btn:disabled {
-    background-color: #d6d8db;
+    background-color: #102333;
     cursor: not-allowed;
   }
 
