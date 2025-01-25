@@ -35,10 +35,10 @@
       </li>
 
       <li class="page-item disabled">
-        <span class="page-link">{{ page + 1 }} of {{ totalPages }}</span>
+        <span class="page-link">{{ page +1}} of {{ totalPages }}</span>
       </li>
 
-      <li class="page-item" [ngClass]="{'disabled': page === totalPages - 1}">
+      <li class="page-item" [ngClass]="{'disabled': page === totalPages -1}">
         <button type="button" class="page-link" (click)="nextPage()">Next</button>
       </li>
     </ul>

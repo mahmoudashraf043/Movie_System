@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+  import { Component } from '@angular/core';
 import { MovieServiceService } from '../movie-service.service';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
@@ -19,7 +19,7 @@ import {MovieOMDBAPI} from "../MovieOMDBAPI";
 export class LoadmoviesComponent {
 movies: MovieOMDBAPI[] = [];
 title:string = '';
-  page:number = 0;
+  page:number =1;
   totalPages:number = 0;
   totalElements:number = 0;
 
@@ -36,11 +36,9 @@ title:string = '';
     this.movieService.getpaginatedmoviesfromomdb(this.title,this.page).subscribe(
 
       (res: any) => {
-        console.log('Received response:', res);
-        this.totalPages = res.totalPages; // Total pages
-        this.totalElements = res.totalElements;
+        this.totalElements = res.totalResults;
         this.movies = res.Search;
-
+        this.totalPages = Math.floor(this.totalElements/25);
       },
       (error) => {
 
@@ -49,8 +47,7 @@ title:string = '';
     );
   }
   nextPage() {
-    console.log(2)
-    if (this.page < this.totalPages - 1) {
+    if (this.page < this.totalPages) {
       this.page++;
       this.loadMovies();
 
@@ -59,11 +56,9 @@ title:string = '';
   }
 
   previousPage() {
-    console.log("h");
     if (this.page > 0) {
       this.page--;
       this.loadMovies();
-      console.log(this.page)
     }
   }
   redirect(){

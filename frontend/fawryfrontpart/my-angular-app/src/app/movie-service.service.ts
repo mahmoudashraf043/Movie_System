@@ -38,10 +38,8 @@ export class MovieServiceService {
   return this.http.get<PaginatedResponse<movie>[]>(`${this.apiUrl}`,{params,headers})
   }
 
-  getpaginatedmoviesfromomdb(title:string,page: number,):Observable<PaginatedResponse<MovieOMDBAPI>[]>{
+  getpaginatedmoviesfromomdb(title:string,page:number):Observable<PaginatedResponse<MovieOMDBAPI>[]>{
     const token=this.auth.getToken()
-    page = 1;
-    console.log(token)
     const params = new HttpParams()
       .set('title',title)
     .set('pageNumber', page);

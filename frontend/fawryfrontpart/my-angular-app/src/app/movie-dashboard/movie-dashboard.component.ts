@@ -70,8 +70,7 @@ export class MovieDashboardComponent {
   this.router.navigate(['/moviedetail',id]);
  }
  nextPage() {
-  console.log(2)
-  if (this.page < this.totalPages - 1) {
+  if (this.page < this.totalPages) {
     this.page++;
     this.loadMovies();
 
@@ -80,11 +79,9 @@ export class MovieDashboardComponent {
 }
 
 previousPage() {
-  console.log("h");
   if (this.page > 0) {
     this.page--;
     this.loadMovies();
-    console.log(this.page)
   }
 }
 }
